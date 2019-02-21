@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Wetatch</string>
+    <string name="weather">Погода</string>
+    <string name="today">Сегодня</string>
+    <string name="today_value">-2 С</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="tomorrow_value">-4 С</string>
+    <string name="after_tomorrow">Послезавтра</string>
+    <string name="after_tomorrow_value">-10 С</string>
+</resources>
