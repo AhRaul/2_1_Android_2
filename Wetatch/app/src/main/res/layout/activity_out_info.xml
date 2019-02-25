@@ -4,24 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".OutInfoActivity">
 
     <TextView
-        android:id="@+id/textViewTitle1"
+        android:id="@+id/textViewTitle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/weather"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textViewTableCity1"
+        android:id="@+id/textViewTableCity2"
         android:layout_width="wrap_content"
-        android:layout_height="22dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -31,40 +34,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.236"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle2"
         app:layout_constraintVertical_bias="0.027" />
 
-    <EditText
-        android:id="@+id/editTextCityName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/textViewCityName"
+        android:layout_width="158dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/suggestionInputSityName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
-        app:layout_constraintStart_toEndOf="@+id/textViewTableCity1"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle1"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toEndOf="@+id/textViewTableCity2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle2"
+        app:layout_constraintVertical_bias="0.026" />
 
-    <Button
-        android:id="@+id/buttonShowWeather"
+    <TextView
+        android:id="@+id/textViewTemperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/showWeather"
+        android:text="@string/tableTemperature"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTableCity1"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTableCity2"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/textViewTemperatureValue"
+        android:layout_width="159dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCityName"
+        app:layout_constraintStart_toStartOf="@+id/textViewCityName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCityName"
+        app:layout_constraintVertical_bias="0.028" />
+
 </android.support.constraint.ConstraintLayout>
