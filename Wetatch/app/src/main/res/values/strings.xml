@@ -11,4 +11,6 @@
     <string name="suggestionInputSityName">Введите название</string>
     <string name="showWeather">Показать погоду</string>
     <string name="tableTemperature">Температура:</string>
+    <string name="switchAtmos">Показать давление:</string>
+    <string name="switchWind">Показать скорость ветра</string>
 </resources>

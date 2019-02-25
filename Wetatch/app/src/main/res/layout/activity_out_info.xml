@@ -80,4 +80,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewCityName"
         app:layout_constraintVertical_bias="0.028" />
 
+    <TextView
+        android:id="@+id/textViewOutAtmos"
+        android:layout_width="209dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTemperatureValue" />
+
+    <TextView
+        android:id="@+id/textViewOutWind"
+        android:layout_width="208dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewOutAtmos"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOutAtmos" />
+
 </android.support.constraint.ConstraintLayout>

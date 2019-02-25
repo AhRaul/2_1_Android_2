@@ -36,7 +36,7 @@
 
     <EditText
         android:id="@+id/editTextCityName"
-        android:layout_width="wrap_content"
+        android:layout_width="183dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -44,13 +44,12 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/suggestionInputSityName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toEndOf="@+id/textViewTableCity1"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle1"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintVertical_bias="0.007" />
 
     <Button
         android:id="@+id/buttonShowWeather"
@@ -67,4 +66,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTableCity1"
         app:layout_constraintVertical_bias="0.036" />
+
+    <Switch
+        android:id="@+id/switchAtmos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/switchAtmos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/buttonShowWeather"
+        app:layout_constraintTop_toBottomOf="@+id/buttonShowWeather"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <Switch
+        android:id="@+id/switchWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/switchWind"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/switchAtmos"
+        app:layout_constraintTop_toBottomOf="@+id/switchAtmos"
+        app:layout_constraintVertical_bias="0.066" />
 </android.support.constraint.ConstraintLayout>
