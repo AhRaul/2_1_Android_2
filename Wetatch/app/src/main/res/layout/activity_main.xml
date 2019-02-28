@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:theme="@style/text_style_1">
+    android:background="@drawable/background"
+    android:gravity="center_vertical"
+    android:theme="@style/text_style_1"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textViewTitle1"
