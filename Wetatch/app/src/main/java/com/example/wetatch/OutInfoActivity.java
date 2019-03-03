@@ -12,15 +12,23 @@ import static com.example.wetatch.StartSecondActivity.SWITCH_WIND;
 import static com.example.wetatch.StartSecondActivity.TEXT;
 
 public class OutInfoActivity extends AppCompatActivity {
+    String text;
+    boolean atmos;
+    boolean wind;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_out_info);
 
-        String text = getIntent().getExtras().getString(TEXT);
-        boolean atmos = getIntent().getExtras().getBoolean(SWITCH_ATMOS);   //получаем состояние свитча из интерна
-        boolean wind = getIntent().getExtras().getBoolean(SWITCH_WIND);     //получаем состояние свитча из интерна
+        try {
+            text = getIntent().getExtras().getString(TEXT);
+            atmos = getIntent().getExtras().getBoolean(SWITCH_ATMOS);   //получаем состояние свитча из интерна
+            wind = getIntent().getExtras().getBoolean(SWITCH_WIND);     //получаем состояние свитча из интерна
+        } catch (NullPointerException e) {
+            System.out.println("getIntent == null " + e);
+        }
 
         //вывод названия города
         TextView textViewCityName = (TextView) findViewById(R.id.textViewCityName);
