@@ -13,4 +13,7 @@
     <string name="tableTemperature">Temperature:</string>
     <string name="switchAtmos">Show pressure:</string>
     <string name="switchWind">Show wind speed</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
