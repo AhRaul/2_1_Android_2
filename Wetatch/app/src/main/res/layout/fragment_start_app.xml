@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/colorPrimaryDark"
     android:gravity="center_vertical"
     android:theme="@style/text_style_1"
     tools:context=".StartAppFragment">
@@ -93,5 +93,14 @@
         app:layout_constraintStart_toStartOf="@+id/switchAtmos"
         app:layout_constraintTop_toBottomOf="@+id/switchAtmos"
         app:layout_constraintVertical_bias="0.066" />
+
+    <Button
+        android:id="@+id/buttonHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/historyButton"
+        app:layout_constraintStart_toEndOf="@+id/buttonShowWeather"
+        app:layout_constraintTop_toTopOf="@+id/buttonShowWeather" />
 
 </android.support.constraint.ConstraintLayout>
