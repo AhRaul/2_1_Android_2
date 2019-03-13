@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +25,7 @@ public class StartAppFragment extends Fragment {
     private Switch switchPressure;          //ссылка на свич давление в макете start_app
     private Switch switchWind;              //ссылка на свич ветер в макете start_app
     private Button buttonShowWeather;       //кнопка вывода погоды города
+    private Button buttonHistory;       //кнопка вывода истории
 
     public StartAppFragment() {
         // Required empty public constructor
@@ -42,6 +42,7 @@ public class StartAppFragment extends Fragment {
         switchPressure = viewInflater.findViewById(R.id.switchAtmos);
         switchWind = viewInflater.findViewById(R.id.switchWind);
         buttonShowWeather = viewInflater.findViewById(R.id.buttonShowWeather);
+        buttonHistory = viewInflater.findViewById(R.id.buttonHistory);
 
         return viewInflater;
     }
@@ -59,7 +60,7 @@ public class StartAppFragment extends Fragment {
         isExistTwoPlase = detailsFrame != null &&
                 detailsFrame.getVisibility() == View.VISIBLE;
 
-        //Если можно расположить рядом фрагмент, то расположим его рядом                //?? кажется бесполезное условие
+        //Если можно расположить рядом фрагмент, то расположим его рядом
         if (isExistTwoPlase) {
             showOutInfo();
         }
@@ -75,6 +76,14 @@ public class StartAppFragment extends Fragment {
                 ActualChoiceState.setSwitchPressure(switchPressure.isChecked());
                 ActualChoiceState.setSwitchWindspeed(switchWind.isChecked());
                 showOutInfo();      //метод вывода (либо в соседний фрагмент, либо в новую активити)
+            }
+        });
+
+        buttonHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainNavigator mainNavigator = (MainNavigator) getActivity();
+                mainNavigator.startHistoryFragment();
             }
         });
     }
@@ -103,5 +112,11 @@ public class StartAppFragment extends Fragment {
             intent.setClass(getActivity(), OutInfoActivity.class);  //этот интент предназначен классу OutInfoActivity, никаких параметров в интент, т.к. они есть в static
             startActivity(intent);
         }
+    }
+
+    //метод вывода фрагмента (в случае если возможен вывод фрагмента на тот же экран, выводит на тот же,
+    //если нельзя, то открыть вторую activity)
+    private void showHistory() {
+
     }
 }
